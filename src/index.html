@@ -3,12 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Widget weather</title>
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+
+    <div class="wrapper">
+      <div id="weather" class="weather">
+        <div class="weather_header">
+          <div class="weather_temp">14</div>
+          <div class="weather_main">
+            <div class="weather_status">Sunny</div>
+            <button class="weather_city" type="button">Kyiv</button>
+          </div>
+          <div >
+            <img class="weather_icon" src="./images/sunny.jpg" alt="Sunny" width="165px">
+          </div>
+        </div>
+       
+        <div class="weather_date">21 Jan 2021</div>
+       <button class="weather_button" type="button">Weather for week</button>
+      </div> 
+    </div>
   </body>
 </html>
