@@ -9,19 +9,36 @@ const currentDate = document.querySelector('.weather_date');
 
 const apiKey = '92b7ae078a5ceba812c34c84b6f882cb';
 
-async function loadWeather (event) {
-const server = `https://api.openweathermap.org/data/2.5/weather?lat=40.71&lon=-74.00&units=metric&appid=${apiKey}`;
-const response = await fetch(server, {
-    method: 'GET',
-});
-const responseResult = await response.json();
+let latitude  = 40.71;
+let longitude = -74.00;
 
-if (response.ok) {
-    getWeather(responseResult);
-} else {
-    weatherBlock.innerHTML = responseResult.message;
-}
-}
+// locationBtn.addEventListener('click', () => {
+//     if(navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(onSuccess);
+//     } else {
+//         alert("Your browser not support geolocation api");
+//     }
+// })
+// function onSuccess(position) {
+//     let latitude  = position.coords.latitude;
+//     let longitude = position.coords.longitude;
+    
+  
+// }
+
+
+
+async function loadWeather () {
+    const server = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude }&lon=${longitude}&units=metric&appid=${apiKey}`;
+    const response = await fetch(server);
+    const responseResult = await response.json();
+    
+    if (response.ok) {
+        getWeather(responseResult);
+    } else {
+        weatherBlock.innerHTML = responseResult.message;
+    }
+    }
 
 function getWeather(data) {
 console.log(data);
