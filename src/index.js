@@ -10,7 +10,7 @@ const currentDate = document.querySelector('.weather_date');
 const apiKey = '92b7ae078a5ceba812c34c84b6f882cb';
 
 async function loadWeather (event) {
-const server = `https://api.openweathermap.org/data/2.5/weather?lat=14.34&lon=30.99&units=metric&appid=${apiKey}`;
+const server = `https://api.openweathermap.org/data/2.5/weather?lat=40.71&lon=-74.00&units=metric&appid=${apiKey}`;
 const response = await fetch(server, {
     method: 'GET',
 });
@@ -33,7 +33,7 @@ const icon = data.weather[0].icon;
 locationBtn.textContent = `${location}`;
 weatherTemp.textContent = `${temp}`;
 weatherStatus.textContent = `${status}`;
-weatherIcon.setAttribute('src', `http://openweathermap.org/img/w/${icon}.png`);
+weatherIcon.setAttribute('src', `http://openweathermap.org/img/wn/${icon}@2x.png`);
 }
 
 if (weatherBlock){

@@ -101,11 +101,12 @@ color: #FFFFFF;
 }
 
 .weather_icon {
-  position: absolute;
-width: 165px;
-height: 156px;
-left: 115px;
-top: 215px;
+  // position: absolute;
+  margin: auto;
+width: 250px;
+height: 250px;
+// left: 115px;
+// top: 215px;
 
 mix-blend-mode: normal;
 }
