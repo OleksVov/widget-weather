@@ -3,45 +3,32 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .weather {
-// position: absolute;
 width: 395px;
 height: 675px;
-left: 869px;
-top: 232px;
-padding: 40px 53px 60px 53px;
+
+padding: 40px 53px 130px 53px;
 background: #4440F7;
 mix-blend-mode: normal;
 border-radius: 4px;
 }
 
-.weather_button {
-  position: absolute;
-width: 177px;
-height: 42px;
-left: 109px;
-top: 573px;
-padding: 10px 12px;
 
-background: rgba(254, 254, 255, 0.3);
-border-radius: 10px;
-border: none;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 23px;
-color: #FFFFFF;
-}
 
-.weather_date {
-  position: absolute;
-width: 199px;
-height: 84px;
-left: 90px;
-top: 461px;
+.weather-date {
+//   position: absolute;
 
-font-family: 'Roboto';
+// left: 90px;
+// top: 461px;
+
+font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 36px;
@@ -53,12 +40,8 @@ color: #FFFFFF;
 
 
 
-.weather_status {
-  // position: absolute;
-// width: 99px;
-// height: 42px;
-// left: 119px;
-// top: 0px;
+.weather-status {
+
 
 font-family: 'Roboto';
 font-style: normal;
@@ -68,12 +51,11 @@ line-height: 42px;
 
 color: #FFFFFF
 }
-.weather_city {
-  // position: absolute;
+.weather-city {
+
 width: 177px;
 height: 42px;
-left: 112px;
-top: 42px;
+padding: 8px 7px 7px 7px;
 
 background: rgba(254, 254, 255, 0.3);
 border-radius: 10px;
@@ -83,17 +65,16 @@ font-style: normal;
 font-weight: 400;
 font-size: 20px;
 line-height: 23px;
-
 color: #FFFFFF;
-
 }
 
-.weather_temp {
-  // position: absolute;
-// width: 96px;
-// height: 75px;
-// left: 0px;
-// top: 5px;
+.location-icon {
+  fill: #FFFFFF;
+   margin-right: 8px;
+}
+
+.weather-temp {
+
 margin-right: 8px;
 
 font-family: 'Roboto';
@@ -104,22 +85,21 @@ line-height: 75px;
 color: #FFFFFF;
 }
 
-.weather_main {
+.weather-main {
   border-left: 2px solid #FFFFFF;
   padding-left: 8px;
 }
 
-.weather_icon {
-  // position: absolute;
-  margin: auto;
+.weather-icon {
+  margin-left: 15px;
+  margin-right: auto;
 width: 250px;
 height: 250px;
-// left: 115px;
-// top: 215px;
-
+margin-bottom: 40px;
 mix-blend-mode: normal;
 }
 
-.weather_header {
+.weather-header {
   display: flex;
+  margin-bottom: 39px;
 }
