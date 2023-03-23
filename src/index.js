@@ -48,7 +48,7 @@ const markup = `<div class="weather-header">
 <div class="weather-main">
   <p class="weather-status">${status}</p>
   <div class="weather-city">
-  <img class="location-icon" src ="../images/carbon_location.svg" alt = "">
+  <img class="location-icon" src ="./images/carbon_location.svg" alt = "">
     ${location}
     </div>
 </div>
