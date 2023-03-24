@@ -11,12 +11,12 @@ const resultDay = date.format('ddd')
 
 
 if(navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(onSuccess);
+    navigator.geolocation.getCurrentPosition(getPosition);
 } else {
     alert("Your browser not support geolocation api");
 }
 
-function onSuccess(position) {
+function getPosition(position) {
 let latitude  = position.coords.latitude;
 let longitude = position.coords.longitude;
 server = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude }&lon=${longitude}&units=metric&appid=${apiWeather}`;
@@ -48,7 +48,7 @@ const markup = `<div class="weather-header">
 <div class="weather-main">
   <p class="weather-status">${status}</p>
   <div class="weather-city">
-  <img class="location-icon" src ="./images/carbon_location.svg" alt = "">
+  <img class="location-icon" src ="./images/carbon_location.svg" alt = "" width = "27" height = "27">
     ${location}
     </div>
 </div>
