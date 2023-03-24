@@ -49,13 +49,14 @@ const markup = `<div class="weather-header">
 <div class="weather-main">
   <p class="weather-status">${status}</p>
   <div class="weather-city_box">
-  <img class="location-icon" src ="${img}" alt = "location" width = "27" height = "27">
+  <img class="location-icon" src ="${img}" alt = "location" >
     <p class="weather-city">${location}</p>
     </div>
 </div>
 </div>
 
 <img class="weather-icon" src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="${status}" >
+
 
 <ul class="weather-date">
 <li class="weather-day">${resultDay}</li>
