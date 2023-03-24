@@ -1,4 +1,5 @@
 import moment from "moment/moment";
+import img from "./images/carbon_location.svg"
 
 const weatherBlock = document.querySelector('#weather');
 
@@ -47,9 +48,9 @@ const markup = `<div class="weather-header">
 <p class="weather-temp">${temp}&deg;</p>
 <div class="weather-main">
   <p class="weather-status">${status}</p>
-  <div class="weather-city">
-  <img class="location-icon" src ="./images/carbon_location.svg" alt = "" width = "27" height = "27">
-    ${location}
+  <div class="weather-city_box">
+  <img class="location-icon" src ="${img}" alt = "location" width = "27" height = "27">
+    <p class="weather-city">${location}</p>
     </div>
 </div>
 </div>
