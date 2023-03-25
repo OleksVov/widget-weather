@@ -1,4 +1,5 @@
 import moment from "moment/moment";
+import Notiflix from "notiflix";
 import img from "./images/carbon_location.svg"
 
 const weatherBlock = document.querySelector('#weather');
@@ -10,11 +11,13 @@ const date = moment(new Date());
 const resultMonth = date.format("D MMM YYYY");
 const resultDay = date.format('ddd')
 
+server = `https://api.openweathermap.org/data/2.5/weather?lat=40.71&lon=-74.00&units=metric&appid=${apiWeather}`;
+loadWeather();
 
 if(navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(getPosition);
+    navigator.geolocation.getCurrentPosition(getPosition, errorLocation);
 } else {
-    alert("Your browser not support geolocation api");
+    return Notiflix.Notify.failure("Your browser not support geolocation api");
 }
 
 function getPosition(position) {
@@ -25,7 +28,9 @@ loadWeather();
 
 }
 
-
+function errorLocation() {
+    return Notiflix.Notify.failure('Unable to get your location')
+}
 
 async function loadWeather () {
     try {
@@ -44,7 +49,8 @@ const status = data.weather[0].main;
 const icon = data.weather[0].icon;
 
 
-const markup = `<div class="weather-header">
+const markup = `<div class="weather"> 
+<div class="weather-header">
 <p class="weather-temp">${temp}&deg;</p>
 <div class="weather-main">
   <p class="weather-status">${status}</p>
@@ -61,6 +67,7 @@ const markup = `<div class="weather-header">
 <ul class="weather-date">
 <li class="weather-day">${resultDay}</li>
 <li class="weather-month">${resultMonth}</li>
-</ul>`
+</ul>
+</div>`
 weatherBlock.innerHTML = markup;
 }
